@@ -8,9 +8,9 @@ namespace ShoppingSpree
 {
     internal interface ISellable
     {
-        double calculatePrice();
+        double CalculatePrice();
 
-        void show();
+        void Show();
     }
 
 
