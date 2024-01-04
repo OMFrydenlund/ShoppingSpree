@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             List<ISellable> items = new List<ISellable>
             {
@@ -18,8 +18,8 @@
                 Console.WriteLine();
             }
 
-            var InventoryClass = new InventoryItem();
-            InventoryClass.calculatePrice();
+            var inventoryClass = new InventoryItem();
+            inventoryClass.calculatePrice();
 
         }
     }
