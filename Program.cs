@@ -1,10 +1,10 @@
 ﻿namespace ShoppingSpree
 {
-    internal class Program
+    internal static class Program
     {
-        static void Main()
+        private static void Main()
         {
-            List<ISellable> items = new List<ISellable>
+            var items = new List<ISellable>
             {
                 new ElectronicItem("Nvidia RTX A6000", 256, 60000, "10.5 x 4.4 x 3.3", "Starship Gray", true, 300, false),
                 new ClothingItem("Lee's Jeans", 40, 799, 1.25, "Large", "Light blue", false),
