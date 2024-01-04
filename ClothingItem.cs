@@ -8,18 +8,20 @@ namespace ShoppingSpree
 {
     internal class ClothingItem : InventoryItem, ISellable
     {
-        public ClothingItem(string name, int amount, int price, double vat, string size, string color, bool sale) : base(name, amount, price, vat, sale)
+        public ClothingItem(string name, int amount, int price, double vat, string size, string color, bool sale) :
+            base(name, amount, price, vat, sale)
         {
             Size = size;
             Color = color;
         }
 
-        public string Size { get; set; }
-        public string Color { get; set; }
+        private string Size { get; set; }
+        private string Color { get; set; }
 
-        public void show()
+        public void Show()
         {
-            Console.WriteLine($"{Name} {Amount} in stock Price: {calculatePrice()}  Vat: {VAT}  Size: {Size}  Color: {Color}");
+            Console.WriteLine(
+                $"{Name} {Amount} in stock Price: {CalculatePrice()}  Vat: {Vat}  Size: {Size}  Color: {Color}");
         }
     }
 }

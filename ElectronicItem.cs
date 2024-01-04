@@ -9,7 +9,13 @@ namespace ShoppingSpree
     //clean UP please
     internal class ElectronicItem : InventoryItem, ISellable
     {
-        public ElectronicItem(string name, int amount, int price, string dimensions, string color, bool insurance, int wattage, bool sale) : base(name, amount, price, 1.25, sale)
+        private string Dimensions { get; set; }
+        private string Color { get; set; }
+        private bool Insurance { get; set; }
+        private int Wattage { get; set; }
+
+        public ElectronicItem(string name, int amount, int price, string dimensions, string color, bool insurance,
+            int wattage, bool sale) : base(name, amount, price, 1.25, sale)
         {
             Dimensions = dimensions;
             Color = color;
@@ -17,15 +23,10 @@ namespace ShoppingSpree
             Wattage = wattage;
         }
 
-        public string Dimensions { get; set; }
-        public string Color { get; set; }
-        public bool Insurance { get; set; }
-        public int Wattage { get; set; }
-
-        public void show()
+        public void Show()
         {
-            Console.WriteLine($"Name: {Name}  {Amount} in stock  Price: {calculatePrice()}  Dimensions: {Dimensions}  Color: {Color}  Insurance: {Insurance}  Wattage: {Wattage}");
+            Console.WriteLine(
+                $"Name: {Name}  {Amount} in stock  Price: {CalculatePrice()}  Dimensions: {Dimensions}  Color: {Color}  Insurance: {Insurance}  Wattage: {Wattage}");
         }
-
     }
 }
